@@ -2,7 +2,7 @@
   <ul class="rr-list">
     {{#each this.model as |band|}}
       <li class="rr-list-item">
-        <LinkTo class="rr-band-link" @route='bands.band.songs' @model={{band.slug}}>
+        <LinkTo class="rr-band-link" @route="bands.band.songs" @model={{band.slug}}>
           {{band.name}}
           <span class="rr-pointer">
             {{fa-icon "angle-right"}}
@@ -41,7 +41,7 @@
             type="button"
             class="avenir bn bg-transparent near-white"
             data-test-rr="new-band-label"
-      {{on "click"this.addBand}}
+      {{on "click" this.addBand}}
     >
       {{fa-icon "plus"}}
       Add new band
