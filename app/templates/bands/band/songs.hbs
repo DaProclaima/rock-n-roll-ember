@@ -5,12 +5,8 @@
       <StarRating
               class="fr"
               @rating={{song.rating}}
-              @item={{song}}
-              @onCLick={{this.updateRating}}
+              @onCLick={{fn this.updateRating song}}
       />
-<!--        { {#each this.stars as |star|}}-->
-<!--          <span class="glyphicon { {if star.isFull 'glyphicon-star' 'glyphicon-star-empty'}}"></span>-->
-<!--        { {/each}}-->
     </li>
   {{else}}
     <li class="tc">

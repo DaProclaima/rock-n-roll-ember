@@ -7,12 +7,11 @@ export default Component.extend({
 
   rating: 0,
   maxRating: 5,
-  item: null,
 
   onClick() {},
 
-  setRating: action(function(newRating, /* event */) {
-    this.item.set('rating', newRating)
+  setRating: action(function(newRating) {
+    return this.onClick(newRating);
   }),
 
   stars: computed('rating', 'maxRating', function() {
